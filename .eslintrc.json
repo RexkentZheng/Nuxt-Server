@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "rules": {
+        "linebreak-style": [
+           "off"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        // 安装在devDependencies的不能引入
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true,
+                "optionalDependencies": false,
+                "peerDependencies": false
+            }
+        ],
+        "no-unused-vars": [
+            "off",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false
+            }
+        ],
+        "no-shadow": [
+            "off",
+            {
+                "builtinGlobals": false,
+                "hoist": "functions",
+                "allow": []
+            }
+        ],
+        "max-len": [
+            "off"
+        ]
+    }
+}
