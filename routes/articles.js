@@ -60,7 +60,7 @@ router.post('/Details', (req, res, next) => {
 
 //  文章列表
 router.get('/allList', (req, res, next) => {
-  Articles.find({}, 'title', (err, doc) => {
+  Articles.find({}, (err, doc) => {
     if (err) {
       getWrong(res, err);
     } else {
@@ -72,7 +72,7 @@ router.get('/allList', (req, res, next) => {
 // 文章分类下的列表
 router.get('/typeList', (req, res, next) => {
   const { classSecond } = req.query;
-  Articles.find({ classSecond }, 'title', (err, doc) => {
+  Articles.find({ classSecond }, (err, doc) => {
     if (err) {
       getWrong(res, err);
     } else {
